@@ -1,4 +1,5 @@
 # Write your MySQL query statement below
+
 with totalUsers as
 (select count(user_id) as total_users from Users)
 
@@ -10,3 +11,22 @@ from Register r
 cross join totalUsers tu
 group by r.contest_id
 order by percentage desc, r.contest_id asc
+
+#OR
+
+with firstOrders as (
+    select
+    customer_id,
+    min(order_date) as first_order_date
+    from 
+    Delivery
+    group by customer_id
+)
+
+select
+round(sum(case when d.order_date = d.customer_pref_delivery_date then 1 else 0 end) / count(distinct d.customer_id) * 100, 2) as immediate_percentage 
+from firstOrders fo 
+inner join Delivery d
+on 
+fo.customer_id = d.customer_id 
+and fo.first_order_date = d.order_date

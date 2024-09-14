@@ -1,0 +1,21 @@
+# Write your MySQL query statement below
+with firstLogins as (
+    select 
+    player_id,
+    min(event_date) as first_login_date
+    from Activity 
+    group by player_id
+),
+consecutiveLogins as (
+    select 
+    f.player_id 
+    from firstLogins f
+    join Activity a
+    on f.player_id = a.player_id 
+    where a.event_date = date_add(f.first_login_date, interval 1 day)
+)
+select 
+    round(count(distinct c.player_id) / count(distinct f.player_id) ,2) as fraction
+from firstLogins f
+left join consecutiveLogins c 
+on f.player_id = c.player_id 
