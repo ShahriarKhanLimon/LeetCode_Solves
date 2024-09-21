@@ -1,0 +1,21 @@
+# Write your MySQL query statement below
+With CustomerProductCount as (
+    select
+        customer_id,
+        count(distinct product_key) as product_count
+    from
+        Customer
+    group by customer_id
+),
+
+ProductCount as (
+    select
+        count(distinct product_key) as total_products
+    from
+    Product
+)
+
+select 
+    c.customer_id
+from CustomerProductCount c, ProductCount p
+where c.product_count = p.total_products
