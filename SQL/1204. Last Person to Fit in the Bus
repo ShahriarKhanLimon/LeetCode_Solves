@@ -7,6 +7,7 @@ SELECT
 FROM
     Queue
 )
+
 SELECT
     person_name
 FROM 
