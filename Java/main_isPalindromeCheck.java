@@ -24,7 +24,7 @@ class Consistent_Strings {
     }
 }
 
-public class main_isPalindromeCheck{
+class main_isPalindromeCheck{
     public static void main(String[] args) {
         Consistent_Strings sol = new Consistent_Strings();
         System.out.println(sol.isPalindrome("A man, a plan, a canal: Panama"));
