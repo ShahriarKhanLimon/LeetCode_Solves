@@ -14,6 +14,7 @@ public class MissingNumber {
         long sum_all_num = (long) n * (n+1) / 2;
 
         long sum_given_num = 0;
+        
 
 
         // Read the given n-1 numbers from a single line
