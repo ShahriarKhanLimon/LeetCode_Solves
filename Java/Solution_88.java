@@ -39,4 +39,9 @@ class Solution {
             p2--;
         }
     }
+
+    public String majorityElement(int[] nums1) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'majorityElement'");
+    }
 }
