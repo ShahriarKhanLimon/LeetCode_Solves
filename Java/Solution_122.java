@@ -1,6 +1,6 @@
-public class Solution_121 {
+public class Solution_122 {
     public static void main(String[] args) {
-        Solution_121 sol = new Solution_121();
+        Solution_122 sol = new Solution_122();
         int[] prices = {7, 1, 5, 3, 6, 4};
         System.out.println(sol.maxProfit(prices));  // Output: 5
         
@@ -9,24 +9,13 @@ public class Solution_121 {
     }
 
     public int maxProfit(int[] prices) {
-        if (prices == null || prices.length == 0) {
-            return 0;
-        }
-        int minPrice = prices[0];
         int maxProfit = 0;
 
         for (int i = 1; i < prices.length; i++) {
-            if (prices[i] < minPrice) {
-                minPrice = prices[i];
-            }
-
-            int potentialProfit = prices[i] - minPrice;
-
-            if (potentialProfit > maxProfit) {
-                maxProfit = potentialProfit;
+            if (prices[i] > prices[i-1]) {
+                maxProfit += prices[i] - prices[i-1];
             }
         }
-
         return maxProfit;
     }
 }
