@@ -15,7 +15,7 @@ class Solution_26 {
     }
     public static void main(String[] args) {
         int[] nums = {0,0,1,1,1,2,2,3,3,4}; // Input array
-        int[] expectedNums = {0,1,2,3,4}; // The expected answer with correct length
+        // int[] expectedNums = {0,1,2,3,4}; // The expected answer with correct length
 
         int k = removeDuplicates(nums); // Calls your implementation
 
