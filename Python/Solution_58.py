@@ -1,4 +1,4 @@
-Class Solution_58(object):
+class Solution_58(object):
     def lengthOfLastWord(self, s):
         """
         :type s: str
