@@ -1,4 +1,4 @@
-class Solution(object):
+class Solution_14(object):
     def longestCommonPrefix(self, strs):
         """
         :type strs: List[str]
@@ -27,7 +27,7 @@ class Solution(object):
 
 # Driver code to test the function
 if __name__ == "__main__":
-    solution = Solution()
+    solution = Solution_14()
 
     # Example 1
     strs1 = ["flower", "flow", "flight"]
