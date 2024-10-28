@@ -33,8 +33,8 @@ public class Solution_15 {
         return result;
     }
 
-public static void main(String[] args){
-    Solution_15 sol = new Solution_15();
+    public static void main(String[] args){
+        Solution_15 sol = new Solution_15();
 
         int [] nums1 = {-1,0,1,2,-1,-4};
         List<List<Integer>> result1 = sol.threeSum(nums1);
