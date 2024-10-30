@@ -69,7 +69,7 @@ public class Solution_73 {
         System.out.println("Original Matrix:");
         printMatrix(matrix1);
 
-        // Rotate the matrix
+        // Update the matrix
         solution.setZeroes(matrix1);
 
         System.out.println("Updated Matrix:");
@@ -85,7 +85,7 @@ public class Solution_73 {
         System.out.println("Original Matrix:");
         printMatrix(matrix2);
 
-        // Rotate the matrix
+        // Update the matrix
         solution.setZeroes(matrix2);
 
         System.out.println("Updated Matrix:");
