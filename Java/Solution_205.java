@@ -27,7 +27,7 @@ public class Solution_205 {
                     return false;
                 }
             } else{
-                mapST.put(charT, charS);
+                mapTS.put(charT, charS);
             }
         }
 
